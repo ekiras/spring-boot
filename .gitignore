@@ -5,6 +5,7 @@ homeScreen.iml
 *.iws
 classes/
 out/
+gradle/
 .gradle/
 .classpath
 .project
