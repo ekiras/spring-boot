@@ -1,11 +1,8 @@
 # How To handle Inheritance with Entities
 
-1. Mark your Base Entity class with annotation `@MappedSuperclass`.
-2. Define all common fields and their getter setters in this class.
-3. Make the base class abstract.
-4. Make all fields as protected so that they can be accessed in inheriting class without getters and setter.
-5. You can also define `@PrePersist` and `@PreUpdate` in this class.
-6. Extend this class in User class and use `@AttributeOverride` to override the attributes defined in the BaseDomain class.
+1. See [how to inherit properties of base class entity](https://github.com/ekiras/spring-boot/tree/master/data-jpa/inheritance/mapped-super-class)
+2. Now apply `@AttributeOverride` to the User class and change the mapping of `id` defined in `BaseDomain` entity class to something else in `User` entity class.
+
 
 
 Classes to look.  
