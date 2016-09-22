@@ -9,8 +9,8 @@
 
 Classes to look.  
 
-1. [BaseDomain.java](https://github.com/ekiras/spring-boot/blob/master/data-jpa/mapped-super-class/src/main/java/com/ekiras/domain/base/BaseDomain.java)  
-2. [User.java](https://github.com/ekiras/spring-boot/blob/master/data-jpa/mapped-super-class/src/main/java/com/ekiras/domain/User.java)  
+1. [BaseDomain.java](https://github.com/ekiras/spring-boot/blob/master/data-jpa/inheritance/mapped-super-class/src/main/java/com/ekiras/domain/base/BaseDomain.java)  
+2. [User.java](https://github.com/ekiras/spring-boot/blob/master/data-jpa/inheritance/mapped-super-class/src/main/java/com/ekiras/domain/User.java)  
 
 > **@MappedSuperclass**  
 >   
