@@ -20,7 +20,7 @@ Classes to look.
 
 
 ## How to run the application
-1. Open mysql and run the following command
+1. Open mysql and run the following command  
    a.  CREATE USER 'ekiras'@'localhost' IDENTIFIED BY 'pwd';  
    b.  GRANT ALL PRIVILEGES ON *.* TO 'ekiras'@'localhost' WITH GRANT OPTION;  
    c.  CREATE database jpa_mapping;  
