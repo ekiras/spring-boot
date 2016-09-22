@@ -14,9 +14,19 @@ Classes to look.
 
 > **@MappedSuperclass**  
 >   
->  A class designated with the <code>MappedSuperclass</code>
-  annotation can be mapped in the same way as an entity except that the
-  mappings will apply only to its subclasses since no table
-  exists for the mapped superclass itself. When applied to the
-  subclasses the inherited mappings will apply in the context
-  of the subclass tables.
+>  A class designated with the <code>MappedSuperclass</code> annotation can be mapped in the same way as an entity except 
+> that the mappings will apply only to its subclasses since no table exists for the mapped superclass itself. When applied
+> to the subclasses the inherited mappings will apply in the context of the subclass tables.
+
+
+## How to run the application
+1. Open mysql and run the following command
+   a.  CREATE USER 'ekiras'@'localhost' IDENTIFIED BY 'pwd';  
+   b.  GRANT ALL PRIVILEGES ON *.* TO 'ekiras'@'localhost' WITH GRANT OPTION;  
+   c.  CREATE database jpa_mapping;  
+2. Go to project localtion and run the application using the command
+   ```
+   gradle bootRun
+   ```
+  
+  
