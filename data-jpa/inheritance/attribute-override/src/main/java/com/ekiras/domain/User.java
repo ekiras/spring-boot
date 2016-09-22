@@ -2,12 +2,15 @@ package com.ekiras.domain;
 
 import com.ekiras.domain.base.BaseDomain;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 /**
  * @author ekiras
  */
 @Entity
+@AttributeOverride(name = "id",column = @Column(name = "userId"))
 public class User extends BaseDomain{
 
     private String email;
