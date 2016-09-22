@@ -7,7 +7,7 @@ import java.util.Date;
  * @author ekiras
  */
 @MappedSuperclass
-public class BaseDomain {
+public abstract class BaseDomain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
