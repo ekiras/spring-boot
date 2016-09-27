@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' rel='stylesheet'/>
+</head>
+<body>
+<div class="container">
+
+    <h1>Add Employees
+        <span class="pull-right">
+            <a class="btn btn-primary" href="list">List Employee</a>
+        </span>
+    </h1>
+
+    <form action="save" method="post" class="form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-control"/>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" class="form-control" />
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" class="form-control" />
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address.address" class="form-control" />
+        <br/>
+        <button class="btn btn-success">Add</button>
+    </form>
+</div>
+</body>
+</html>
