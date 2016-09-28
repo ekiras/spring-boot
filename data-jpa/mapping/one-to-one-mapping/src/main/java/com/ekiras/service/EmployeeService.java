@@ -1,5 +1,6 @@
 package com.ekiras.service;
 
+import com.ekiras.domain.Address;
 import com.ekiras.domain.Employee;
 import com.ekiras.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ public class EmployeeService {
     }
 
     public Employee save(Employee employee) {
+        employee.getAddress().setEmployee(employee);
         return employeeRepository.save(employee);
     }
 

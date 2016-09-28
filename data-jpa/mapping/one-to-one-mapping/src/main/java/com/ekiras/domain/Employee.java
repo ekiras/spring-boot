@@ -23,7 +23,7 @@ public class Employee {
     private String name;
     private String password;
     
-    @OneToOne(optional = false,cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "employee",optional = false,cascade = CascadeType.ALL)
     private Address address;
 
 

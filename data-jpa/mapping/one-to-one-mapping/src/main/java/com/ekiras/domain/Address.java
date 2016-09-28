@@ -21,7 +21,7 @@ public class Address {
 
     private String address;
 
-    @OneToOne(fetch = FetchType.LAZY,mappedBy = "address")
+    @OneToOne(fetch = FetchType.LAZY)
     private Employee employee;
 
     @Override
