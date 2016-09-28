@@ -24,6 +24,9 @@ public class Address {
     @OneToOne(fetch = FetchType.LAZY)
     private Employee employee;
 
+    public Address(){}
+    public Address(String address){this.address=address;}
+
     @Override
     public String toString() {
         return "Address{" +
@@ -31,7 +34,6 @@ public class Address {
                 ", dateCreated=" + dateCreated +
                 ", lastUpdated=" + lastUpdated +
                 ", address='" + address + '\'' +
-                ", employee=" + employee +
                 '}';
     }
 
