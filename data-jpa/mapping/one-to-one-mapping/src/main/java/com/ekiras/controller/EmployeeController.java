@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.*;
  * @author ekiras
  */
 @Controller
-@RequestMapping("/employee")
+@RequestMapping({"/employee",""})
 public class EmployeeController {
 
     private static final String PATH = "/employee";
     @Autowired private EmployeeService employeeService;
 
-    @RequestMapping("/list")
+    @RequestMapping({"/list",""})
     public String list(Model model){
         model.addAttribute("employees", employeeService.list());
         return PATH+"/list";
