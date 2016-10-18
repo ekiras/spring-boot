@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' rel='stylesheet'/>
+</head>
+<body>
+<div class="container">
+
+    <h1>Edit Employees
+        <span class="pull-right">
+            <a class="btn btn-primary" href="/employee/list">List Employee</a>
+        </span>
+    </h1>
+
+    <form action="/employee/update" method="post" class="form">
+        <input type="hidden" name="id"  th:value="${employee.id}" />
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" th:value="${employee.name}" class="form-control"/>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" th:value="${employee.email}" class="form-control" />
+        <label for="password">Email</label>
+        <input type="text" id="password" name="password" th:value="${employee.password}" class="form-control" />
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address.address" th:value="${employee.address.address}" class="form-control" />
+        <br/>
+        <button class="btn btn-success">Update</button>
+    </form>
+</div>
+</body>
+</html>

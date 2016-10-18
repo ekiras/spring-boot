@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' rel='stylesheet'/>
+</head>
+<body>
+<div class="container">
+
+    <h1>List of Departments
+        <span class="pull-right">
+        <a class="btn btn-primary" href="create">Add Department</a>
+        </span>
+    </h1>
+    <hr/>
+
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        <tr th:each="dep,itr : ${departments}">
+            <td th:text="${itr.count}">S.No</td>
+            <td th:text="${dep.name}">Name</td>
+            <td>
+                <a class="btn btn-success" th:href="@{'/employee/list/' + ${dep.id}}">Employees</a>
+                <a class="btn btn-warning" th:href="@{'edit/' + ${dep.id}}">Edit</a>
+                <a class="btn btn-danger" th:href="@{'delete/' + ${dep.id}}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

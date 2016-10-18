@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' rel='stylesheet'/>
+</head>
+<body>
+<div class="container">
+
+    <h1>Employees Details
+        <span class="pull-right">
+            <a class="btn btn-primary" href="/employee/list">List Employee</a>
+            <a class="btn btn-warning" th:href="@{'/employee/edit/'+${employee.id}}">Edit Employee</a>
+            <a class="btn btn-danger" th:href="@{'/employee/delete/'+${employee.id}}">Delete Employee</a>
+        </span>
+    </h1>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <td th:text="${employee.id}">id</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td th:text="${employee.name}">name</td>
+
+        </tr>
+        <tr><th>Email</th>
+            <td th:text="${employee.email}">email</td>
+
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td th:text="${employee.address.address}">address</td>
+        </tr>
+        <tr>
+            <th>Department</th>
+            <td>
+                <a class="btn btn-link" th:href="@{'/department/show/'+${employee.department.id}}" th:text="${employee.department.name}"></a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
