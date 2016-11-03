@@ -1,3 +1,12 @@
+
+[Read Full Description Here](http://www.ekiras.com/2016/09/one-to-one-mapping-in-spring-boot-spring-data-jpa-hibernate.html)
+
+
+
+> **Also Read**  
+> 1. [One to Many Mapping](http://www.ekiras.com/2016/11/one-to-many-mapping-in-spring-boot-spring-data-jpa-hibernate.html)
+
+
 # One To One Mapping 
 Let's take two entitie/domains 
 
