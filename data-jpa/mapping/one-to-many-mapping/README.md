@@ -1,5 +1,6 @@
 # One To Many Mapping 
-Lets take two entities/domains 
+Lets take two entities/domains  
+
 1.  Employee
 2.  Department
 
