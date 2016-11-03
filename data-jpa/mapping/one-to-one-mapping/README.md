@@ -1,22 +1,60 @@
-# How To handle Inheritance with Entities
+# One To One Mapping 
+Let's take two entitie/domains 
 
-1. Mark your Base Entity class with annotation `@MappedSuperclass`.
-2. Define all common fields and their getter setters in this class.
-3. Make the base class abstract.
-4. Make all fields as protected so that they can be accessed in inheriting class without getters and setter.
-5. You can also define `@PrePersist` and `@PreUpdate` in this class.
+1.  Employee
+2.  Address
 
+Where the relation between the two enties is, an Employee can have only one Address and an Address can belong to only one Employee i.e One To One (Employee - Address).
 
-Classes to look.  
+Simplest code to make this mapping can be as follows.
 
-1. [BaseDomain.java](https://github.com/ekiras/spring-boot/blob/master/data-jpa/inheritance/mapped-super-class/src/main/java/com/ekiras/domain/base/BaseDomain.java)  
-2. [User.java](https://github.com/ekiras/spring-boot/blob/master/data-jpa/inheritance/mapped-super-class/src/main/java/com/ekiras/domain/User.java)  
+## Employee.java
+    @Entity
+    public class Employee {
 
-> **@MappedSuperclass**  
->   
->  A class designated with the <code>MappedSuperclass</code>
-  annotation can be mapped in the same way as an entity except that the
-  mappings will apply only to its subclasses since no table
-  exists for the mapped superclass itself. When applied to the
-  subclasses the inherited mappings will apply in the context
-  of the subclass tables.
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        protected long id;
+
+        @OneToOne(mappedBy = "employee",optional = false,cascade = CascadeType.ALL)
+        private Address address;
+
+    }
+
+## Address.java
+    @Entity
+    public class Address {
+
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        private long id;
+
+        @OneToOne(fetch = FetchType.LAZY)
+        private Employee employee;
+
+    }
+    
+The tables in sql formed will be as follows
+
+    mysql> desc employee;
+    +--------------+--------------+------+-----+---------+----------------+
+    | Field        | Type         | Null | Key | Default | Extra          |
+    +--------------+--------------+------+-----+---------+----------------+
+    | id           | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+    | date_created | datetime     | YES  |     | NULL    |                |
+    | email        | varchar(255) | YES  |     | NULL    |                |
+    | last_updated | datetime     | YES  |     | NULL    |                |
+    | name         | varchar(255) | YES  |     | NULL    |                |
+    | password     | varchar(255) | YES  |     | NULL    |                |
+    +--------------+--------------+------+-----+---------+----------------+
+
+    mysql> desc address;
+    +--------------+--------------+------+-----+---------+----------------+
+    | Field        | Type         | Null | Key | Default | Extra          |
+    +--------------+--------------+------+-----+---------+----------------+
+    | id           | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+    | address      | varchar(255) | YES  |     | NULL    |                |
+    | date_created | datetime     | YES  |     | NULL    |                |
+    | last_updated | datetime     | YES  |     | NULL    |                |
+    | employee_id  | bigint(20)   | YES  | MUL | NULL    |                |
+    +--------------+--------------+------+-----+---------+----------------+
