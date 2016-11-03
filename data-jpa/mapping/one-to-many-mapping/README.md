@@ -1,9 +1,9 @@
 # One To Many Mapping 
 Lets take two entities/domains 
-> 1.  Employee
-> 2.  Department
-> 
-> Where the relation between the two enties is, A Department can have multiple Employees but an Employee can belong to only one Department i.e One To Many (Employee to Department).
+1.  Employee
+2.  Department
+
+Where the relation between the two enties is, A Department can have multiple Employees but an Employee can belong to only one Department i.e One To Many (Employee to Department).
 
 Simplest code to make this mapping can be as follows.
 
