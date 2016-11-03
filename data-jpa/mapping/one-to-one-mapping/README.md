@@ -1,10 +1,10 @@
 
-[Read Full Description Here](http://www.ekiras.com/2016/09/one-to-one-mapping-in-spring-boot-spring-data-jpa-hibernate.html)
-
-
+[Read Full Description](http://www.ekiras.com/2016/09/one-to-one-mapping-in-spring-boot-spring-data-jpa-hibernate.html)
+---
 
 > **Also Read**  
-> 1. [One to Many Mapping](http://www.ekiras.com/2016/11/one-to-many-mapping-in-spring-boot-spring-data-jpa-hibernate.html)
+> 1.  [One to One Mapping](http://www.ekiras.com/2016/09/one-to-one-mapping-in-spring-boot-spring-data-jpa-hibernate.html)  
+> 2.  [One to Many Mapping](http://www.ekiras.com/2016/11/one-to-many-mapping-in-spring-boot-spring-data-jpa-hibernate.html)
 
 
 # One To One Mapping 
