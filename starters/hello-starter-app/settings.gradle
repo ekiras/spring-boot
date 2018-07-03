@@ -1,0 +1,2 @@
+rootProject.name = 'hello-starter-app'
+include 'hello-service', 'hello-starter'
